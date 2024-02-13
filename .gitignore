@@ -1,0 +1,54 @@
+# IntelliJ / Eclipse / NetBeans
+.idea/
+.classpath
+.project
+*.iml
+*.ipr
+*.iws
+
+# Compiled files
+*.class
+*.jar
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Package files
+*.war
+*.ear
+
+# Dependency directories
+/lib/
+/target/
+/build/
+/bin/
+
+# Spring Boot specific
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# STS specific
+.springBeans
+.settings/
+
+# Tomcat specific
+work/
+logs/
+temp/
+*.jar
+
+# Gradle specific
+.gradle/
+build/
+
+# Maven specific
+/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+build/

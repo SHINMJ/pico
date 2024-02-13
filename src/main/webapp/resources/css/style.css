@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-wrapper{
+    width: 400px;
+    height: 350px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.login-wrapper > h2{
+    font-size: 24px;
+    color: #6A24FE;
+    margin-bottom: 20px;
+}
+#login-form > input{
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    background-color: #F8F8F8;
+}
+#login-form > input::placeholder{
+    color: #D2D2D2;
+}
+#login-form > input[type="submit"]{
+    color: #fff;
+    font-size: 16px;
+    background-color: #6A24FE;
+    margin-top: 20px;
+}
+
+.login-error {
+	color: red;
+}
+
+/* Header 스타일 */
+.header {
+  background-color: #333; /* Header 배경색 */
+  color: #fff; /* Header 텍스트 색상 */
+  padding: 15px; /* Header 내부 여백 */
+  display: flex; /* Flexbox를 이용하여 요소를 배치 */
+  justify-content: space-between; /* 요소를 Header 내부에서 좌우로 분산 배치 */
+  align-items: center; /* 요소를 수직 정렬 */
+}
+
+/* 로그아웃 버튼 스타일 */
+.logout-btn {
+  background-color: #007bff; /* 버튼 배경색 */
+  color: #fff; /* 버튼 텍스트 색상 */
+  border: none; /* 테두리 없음 */
+  padding: 10px 20px; /* 내부 여백 */
+  border-radius: 5px; /* 버튼 둥글게 */
+  cursor: pointer; /* 마우스 커서를 포인터로 변경하여 클릭 가능한 것처럼 보이도록 함 */
+}
+
+/* 로그아웃 버튼 호버 효과 */
+.logout-btn:hover {
+  background-color: #0056b3; /* 호버시 배경색 변경 */
+}
+
+.centered-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.parent-container {
+    text-align: center; /* 자식 요소들을 가운데 정렬 */
+}
+
+.mg-50 {
+	margin: 50;
+}
+
+.btn {
+  color: #fff; /* 버튼 텍스트 색상 */
+  border: none; /* 테두리 없음 */
+  padding: 10px 20px; /* 내부 여백 */
+  border-radius: 5px; /* 버튼 둥글게 */
+  cursor: pointer; /* 마우스 커서를 포인터로 변경하여 클릭 가능한 것처럼 보이도록 함 */
+  font-size: 16px;
+  background-color: #6A24FE;
+  margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: hsl(257, 80%, 70%); /* 채도를 70%로 설정하여 낮은 채도의 색상으로 변경 */
+}
+
+.checkbox-list {
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 0; /* 패딩 제거 */
+    margin: 0; /* 마진 제거 */
+}
+.checkbox-item {
+    margin-bottom: 10px; /* 각 항목 사이의 간격 조절 */
+}
+
+.checkbox-item input[type="checkbox"] {
+    display: none; /* 원본 체크박스 숨기기 */
+}
+
+.checkbox-item label {
+    display: block;
+    padding-left: 25px; /* 체크박스 옆 여백 */
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.checkbox-item label:before {
+    content: "";
+    display: inline-block;
+    width: 18px; /* 체크박스 너비 */
+    height: 18px; /* 체크박스 높이 */
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.checkbox-item input[type="checkbox"]:checked + label:before {
+    background-color: #007bff; /* 체크된 상태의 배경색 */
+}
+
+.checkbox-item input[type="checkbox"]:checked + label:after {
+    content: "\2713"; /* 체크 마크 */
+    font-size: 14px;
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: #fff; /* 체크 마크 색상 */
+}
+
+.checkbox-labels {
+    display: inline-block; /* 체크 박스와 라벨을 인라인 블록 요소로 설정 */
+}
+
+.checkbox-label {
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    margin-right: 20px; /* 각 요소 사이의 간격 설정 */
+    width: 250px; /* 각 요소의 고정된 너비 설정 */
+    white-space: nowrap; 
+}
+
+.flex-container {
+    display: flex; /* flexbox 레이아웃 적용 */
+    justify-content: space-between; /* 자식 요소들을 동일한 간격으로 분산 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.flex-container div {
+    width: 150px;
+    padding-left: 20px;
+}
