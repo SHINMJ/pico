@@ -2,11 +2,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-
+<c:set var="path" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css"/>">
+	<link href="${path}/resources/css/style.css" rel="stylesheet" type="text/css">
 	<title>Home</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
 	<sec:authorize access="isAuthenticated()">
 	    <sec:authentication property="principal" var="loginUser" />
 	    <h2>${loginUser.name()} 회원님, 환영합니다.</h2>
-	    <form action="/logout" method="post">
+	    <form action="${path}/logout" method="post">
 	        <sec:csrfInput/>
 	        <button class="logout-btn" type="submit">로그아웃</button>
 	    </form>
@@ -72,7 +73,7 @@
 
 		        $.ajax({
 		            type:'post',
-		            url:'http://localhost:8080/order',
+		            url: `<c:out value="http://localhost:8080${path}/order" />`,
 		            headers: { 'X-CSRF-TOKEN': csrfToken }, // 요청 헤더에 CSRF 토큰 추가
 		            contentType: 'application/json;charset=UTF-8',
 		            dataType: 'text', 

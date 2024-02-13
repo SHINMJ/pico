@@ -10,12 +10,12 @@
 <head>
 	<meta charset="UTF-8">
 	<link href="${path}/resources/css/style.css" rel="stylesheet" type="text/css">
-	<title>Insert title here</title>
+	<title>login</title>
 </head>
 <body>
 	<div class="login-wrapper">
         <h2>Login</h2>
-        <form action="/login" method="post" id="login-form">
+        <form action="${path}/login" method="post" id="login-form">
   			<input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
             <input type="text" name="username" placeholder="아이디">
             <input type="password" name="password" placeholder="패스워드">
